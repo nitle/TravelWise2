@@ -20,8 +20,3 @@ This is the **light version** of the Travel Planner app — redesigned with a cl
 - HTML
 - CSS
 
-## 📦 Installation
-
-```bash
-npm install
-npm run dev
