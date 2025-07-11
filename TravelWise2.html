@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelWise</title>
+    <link rel="stylesheet" href="TravelWise.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f7f7f7;
+        }
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 24px;
+        }
+        .logo svg {
+            margin-right: 10px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+        .lang-switch {
+            display: flex;
+            gap: 10px;
+        }
+        .lang-switch a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #888;
+        }
+        .lang-switch a.active {
+            color: #000;
+        }
+        .hero {
+            text-align: center;
+            padding: 250px 20px 176px;
+            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+        .search-input {
+            color: #000;
+            background-color: #ffffffd0;
+            padding: 15px;
+            border-radius: 30px;
+            border: none;
+            width: 300px;
+            max-width: 80%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.404);
+        }
+        .search-input:focus{
+            background-color: #fff;
+        }
+
+        .section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card h3{
+            margin-bottom: 7px;
+        }
+
+        .card i {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: #3B82F6;
+        }
+        .call-to-action {
+            text-align: center;
+            padding-bottom: 50px;
+        }
+        .call-to-action button {
+            background-color: #3B82F6;
+            color: #fff;
+            padding: 15px 40px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .call-to-action button:hover {
+            background-color: #2563EB;
+        }
+        .call-to-action i {
+            margin-left: 10px;
+        }
+        footer {
+            background-color: #111827;
+            color: #9CA3AF;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        footer p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <svg height="34px" width="34px" viewBox="0 0 512 512" fill="#3B82F6"><path d="M256 0C114.625 0 0 114.625 0 256s114.625 256 256 256 256-114.625 256-256S397.375 0 256 0zm0 472c-119.297 0-216-96.703-216-216S136.703 40 256 40s216 96.703 216 216-96.703 216-216 216z"/></svg>
+            TravelWise
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Start Planning</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="lang-switch">
+            <a href="#" class="active">DE</a>
+            <a href="#">EN</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Find the Perfect Place to Go</h1>
+        <p>Receive personalized recommendations for activities, hotels, and more</p>
+        <input type="text" class="search-input" placeholder="Search...">
+    </section>
+
+    <section class="section">
+        <h2>3 Steps to the Perfect Trip</h2>
+        <div class="cards">
+            <div class="card">
+                <i class="fas fa-map-marked-alt"></i>
+                <h3>Choose Destination</h3>
+                <p>Pick from top places around the world or explore hidden gems.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-suitcase-rolling"></i>
+                <h3>Plan Your Journey</h3>
+                <p>Customize your trip with expert tips and travel tools.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-plane-departure"></i>
+                <h3>Enjoy the Adventure</h3>
+                <p>Travel confidently and make unforgettable memories.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="call-to-action">
+        <button>LET’S PLAN YOUR TRIP <i class="fas fa-arrow-right"></i></button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 TravelWise. All rights reserved.</p>
+        <p>Made with ❤️ for explorers worldwide.</p>
+    </footer>
+    <script>
+
+  const links = document.querySelectorAll(".lang-switch a");
+
+  links.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      links.forEach(l => l.classList.remove("active"));
+      link.classList.add("active");
+    });
+  });
+</script>
+
+</body>
+</html>
